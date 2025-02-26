@@ -1,0 +1,136 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz@1,6..96&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Bodoni Moda", serif;
+}
+
+body{
+    height: 100vh;
+    background-image: url(stars-12673_256.gif), url(ai-generated-8561141_1280.jpg);
+    background-blend-mode: normal;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    perspective: 1000px;
+}
+
+.card{
+    width: 280px;
+    height: 360px;
+    position: absolute ;
+    top: 100px;
+    left: 100px;
+    transition: 3s;
+    transform-style: preserve-3d;
+}
+
+.card > .outside{
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
+}
+
+.card > .inside{
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.card:hover{
+    transform: rotateY(180deg);
+}
+
+.block{
+    position: absolute;
+    top: 200px;
+    right: 600px;
+    perspective: 800px;
+}
+
+.outside, .inside{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.outside{
+    background-color: blanchedalmond;
+    box-shadow: inset 0 5px 10px rgba(0,0,0,0.5);
+    position: absolute;
+}
+
+.outside span{
+    font-size:medium;
+}
+
+.outside h1{
+    font-size: 3rem;
+    font-weight: bold;
+    color: salmon; 
+    margin-bottom: 30px;
+}
+
+.inside{
+    background-color: rgba(79, 229, 255, 0.838);
+    box-shadow: inset 0 5px 10px rgba(0,0,0,0.5);
+}
+
+.inside h3{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 20px; 
+    transform: rotateY(0deg);
+}
+
+.frames{
+    width: 400px;
+    height: 150px;
+    box-shadow: 0 5px 10px rgb(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 0.8rem;
+    transform: rotateY(-230deg) rotateX(20deg);
+    position: absolute;
+}
+
+.frames img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+    transform: rotateY(180deg);
+}
+
+.frames P{
+    font-size: 20px;
+    font-weight: bold;
+    transform: rotateY(180deg);
+}
+
+.frames:nth-child(1){
+    top: -110px;
+    z-index: -1;
+    background-color: coral;
+}
+
+.frames:nth-child(2){
+    background-color: goldenrod;
+}
+
+.frames:nth-child(3){
+    top: 100px;
+    background-color: burlywood;
+}
+
+.button{
+    background-color: salmon;
+    color: white;
+    cursor: pointer;
+    padding: 2px;
+}
